@@ -3,8 +3,8 @@ services:
     mongo-2-2:
         container_name: mongo-2-2
         image: mongo:3.4.7
-        # volumes:
-        #     - ./Data/data22/db:/data/db
+        volumes:
+            - ./Data/data22/db:/data/db
         ports:
             - 54322:27017
         command: mongod --replSet rs2 --shardsvr --port 27017  --oplogSize 16 --noprealloc --smallfiles
@@ -13,8 +13,8 @@ services:
     mongo-2-3:
         container_name: mongo-2-3
         image: mongo:3.4.7
-        # volumes:
-        #     - ./Data/data23/db:/data/db
+        volumes:
+            - ./Data/data23/db:/data/db
         ports:
             - 54323:27017
         command: mongod --replSet rs2 --shardsvr --port 27017  --oplogSize 16 --noprealloc --smallfiles
@@ -23,8 +23,8 @@ services:
     mongo-2-1:
         container_name: mongo-2-1
         image: mongo:3.4.7
-        # volumes:
-        #     - ./Data/data21/db:/data/db
+        volumes:
+            - ./Data/data21/db:/data/db
         ports:
             - 54321:27017
         command: mongod --replSet rs2 --shardsvr --port 27017  --oplogSize 16 --noprealloc --smallfiles

@@ -3,8 +3,8 @@ services:
     mongo-router:
         container_name: mongo-router
         image: mongo:3.4.7
-        # volumes:
-        #     - ./Data/data01/db:/data/db
+        volumes:
+            - ./Data/data01/db:/data/db
         ports:
             - 54301:27017
         depends_on:
